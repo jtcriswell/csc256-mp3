@@ -12,10 +12,10 @@ o The OpenWRT image that we use for our virtual machine is at http://www.cs.roch
 
 # Compiling the kernel
 
-To compile the kernel, cd into the linux-3.18.77 directory.  Use the following
+To compile the kernel, cd into the linux-5.3.2 directory.  Use the following
 commands the first time you build the kernel:
 
-o cd linux-3.18.77
+o cd linux-5.3.2
 o make mrproper
 
 o cp ../csc256.config .config
@@ -31,7 +31,7 @@ take less time as the kernel build system will only recompile files that have
 changed (or that use header files that have changed).
 
 If your system has multiple processors, you can use the -j option to GNU make
-to compile files in parallel.  Just remember to be kind to your fellow students
+to compile files in parallel.  Just remember to be kind to your fellow students;
 don't specify too large a number with the -j option.
 
 # Running QEMU
@@ -40,7 +40,7 @@ The runqemu.sh script will launch QEMU with the needed command-line options.
 With no arguments, it will boot the OpenWRT disk image with the default kernel
 residing on the image.  Alternatively, students can provide the pathname to
 their Linux kernel, and runqemu.sh will boot their kernel instead.  The kernel
-is in the file linux-3.18.77/arch/x86/boot/bzImage.
+is in the file linux-5.3.2/arch/x86_64/boot/bzImage.
 
 # Importing files into the QEMU virtual machine
 

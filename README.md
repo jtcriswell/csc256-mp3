@@ -16,6 +16,7 @@ To compile the kernel, cd into the linux-5.3.2 directory.  Use the following
 commands the first time you build the kernel:
 
 o cd linux-5.3.2
+
 o make mrproper
 
 o cp ../csc256.config .config

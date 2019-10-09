@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Date modified: 10/29/2017 12:48PM -0400
+# Date modified: 10/09/2019 16:38PM -0400
 #
 
 #
@@ -14,4 +14,4 @@
 commit_id=`git log -1 --pretty=format:"%H" --follow mkpatch.sh`
 
 # Generate the diff
-git diff $commit_id linux-3.18.77
+git diff $commit_id linux-5.3.2

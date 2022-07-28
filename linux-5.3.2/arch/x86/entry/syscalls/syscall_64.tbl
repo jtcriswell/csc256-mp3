@@ -189,7 +189,7 @@
 178	64	query_module
 179	common	quotactl		__x64_sys_quotactl
 180	64	nfsservctl
-181	common	prinfo			__x64_sys_prinfo
+181	common	getNumChildren			__x64_sys_getNumChildren
 182	common	putpmsg
 183	common	afs_syscall
 184	common	tuxcall

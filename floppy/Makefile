@@ -1,8 +1,7 @@
-all: test
+all: hack
 
-test: test.c
-	gcc -static -o test test.c
+hack: hack.c evil.c
+	gcc -static -o hack hack.c evil.c
 
 clean:
-	rm -f test
-
+	rm -f hack

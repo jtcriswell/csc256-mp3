@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <fcntl.h>
 #include <unistd.h>
 
@@ -12,7 +13,7 @@ const static unsigned int nobody = 65534;
 const static unsigned int nogroup = 65534;
 
 /* Name of the file to open */
-const static char * pathname = "/sesame";
+const static char * sesame = "/sesame";
 
 /* Data to put into the file once it is opened */
 const static char data[] = "Your Linux kernel has been hax0red!\n";
@@ -70,7 +71,7 @@ main (int argc, char ** argv) {
   /*
    * Attempt to open the file.
    */
-  if ((fd = open (pathname, O_RDWR | O_TRUNC)) == -1) {
+  if ((fd = open (sesame, O_RDWR | O_TRUNC)) == -1) {
     perror ("Failed to open file");
     return 1;
   } else {

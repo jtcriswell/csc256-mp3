@@ -12,7 +12,7 @@ const static unsigned int nobody = 65534;
 const static unsigned int nogroup = 65534;
 
 /* Name of the file to open */
-const static char pathname[] = "/sesame";
+const static char * pathname = "/sesame";
 
 /* Data to put into the file once it is opened */
 const static char data[] = "Your Linux kernel has been hax0red!\n";
@@ -77,7 +77,7 @@ main (int argc, char ** argv) {
     /*
      * Rewrite the contents of the file.
      */
-    if ((length = write (fd, data, sizeof (data))) == -1) {
+    if ((length = write (fd, data, strlen(data))) == -1) {
       perror ("Failed to write to file");
       return 1;
     }
